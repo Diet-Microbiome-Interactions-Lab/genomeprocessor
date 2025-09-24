@@ -448,13 +448,13 @@ These flags control the core behavior, performance, and resource usage of the SP
 
             What it is: Sets the number of CPU threads to use for parallel computation.
 
-            Critical Info: The more threads you provide, the faster the assembly will run, up to a point. Performance doesn't always scale linearly. A safe bet is to use the number of available cores on your machine (e.g., --threads 16).
+            Critical Info: The more threads you provide, the faster the assembly will run, up to a point. Performance doesn't always scale linearly. A safe bet is to use the number of available cores on the machine (e.g., --threads 16).
 
         --memory <GB>
 
             What it is: Specifies the maximum amount of RAM in Gigabytes that SPAdes is allowed to use.
 
-            Critical Info: This is a crucial parameter to prevent your assembly job from crashing. SPAdes can be memory-hungry, especially with large k-mer sizes and complex datasets. Always set this to a value slightly less than the total available RAM on your system (e.g., --memory 50 on a 64 GB machine).
+            Critical Info: This is a crucial parameter to prevent the assembly job from crashing. SPAdes can be memory-hungry, especially with large k-mer sizes and complex datasets. Always set this to a value slightly less than the total available RAM on the system (e.g., --memory 50 on a 64 GB machine).
 
         -k <k1,k2,...>
 
@@ -466,7 +466,7 @@ These flags control the core behavior, performance, and resource usage of the SP
 
             Large k-mers (e.g., 99, 127) are excellent at resolving repeats but are more sensitive to low coverage and errors.
 
-            By using multiple k-mers, SPAdes gets the best of both worlds. The default (-k 21,33,55,77,99,127) is a good starting point for Illumina data on bacterial genomes. Crucially, the maximum k-mer size must be an odd number and smaller than your read length.
+            By using multiple k-mers, SPAdes gets the best of both worlds. The default (-k 21,33,55,77,99,127) is a good starting point for Illumina data on bacterial genomes. Crucially, the maximum k-mer size must be an odd number and smaller than the read length.
 
         --cov-cutoff <auto|float>
 
@@ -502,7 +502,7 @@ These flags control the core behavior, performance, and resource usage of the SP
             What it is: Invokes the scSPAdes pipeline, which is specifically designed for single-cell sequencing data. This data is characterized by extremely non-uniform coverage due to whole-genome amplification biases, which this mode is built to handle.
 
     Reads
-    These flags specify your input sequencing data. The files are typically in FASTQ format (.fastq or .fq), often compressed with gzip (.gz).
+    These flags specify the input sequencing data. The files are typically in FASTQ format (.fastq or .fq), often compressed with gzip (.gz).
 
         -1 <R1> -2 <R2>
 
@@ -518,7 +518,7 @@ These flags control the core behavior, performance, and resource usage of the SP
 
             What it is: Provides a set of high-quality contigs in FASTA format to be used as a trusted "backbone" for the assembly.
 
-            Critical Info: SPAdes will use these contigs to guide the assembly graph construction, aiming to extend them and bridge gaps using your read data. This is useful if you have a high-quality assembly of a very closely related reference genome.
+            Critical Info: SPAdes will use these contigs to guide the assembly graph construction, aiming to extend them and bridge gaps using the read data. This is useful if you have a high-quality assembly of a very closely related reference genome.
 
         --untrusted-contigs <fa>
 
@@ -546,13 +546,13 @@ These flags control the core behavior, performance, and resource usage of the SP
 
             What it is: Skips the initial read error-correction step (BayesHammer) and proceeds directly to the assembly stage.
 
-            Critical Info: Use this if your reads are of very high quality or if you have already performed error correction using a different tool. This can save a significant amount of time.
+            Critical Info: Use this if the reads are of very high quality or if you have already performed error correction using a different tool. This can save a significant amount of time.
 
         --only-error-correction
 
             What it is: Runs only the BayesHammer error-correction module and then exits.
 
-            Critical Info: This is a very useful feature for pre-processing your reads. The corrected reads will be saved in the output directory and can then be used as input for SPAdes (with --only-assembler) or any other downstream analysis or different assembly tool.
+            Critical Info: This is a very useful feature for pre-processing the reads. The corrected reads will be saved in the output directory and can then be used as input for SPAdes (with --only-assembler) or any other downstream analysis or different assembly tool.
 
 For further details, please go to: https://ablab.github.io/spades/input.html
 """
