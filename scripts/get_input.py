@@ -61,7 +61,7 @@ import sys
     # access to Python runtime info and command-line arguments.
     # Read command-line arguments (e.g., the user’s folder path).
     # Exit with status codes (sys.exit(1) for errors).
-    # Know which Python you’re running on (sys.version).
+    # Know which Python we’re running on (sys.version).
 
 import os
     # operating system interface (files, environment variables, permissions).
