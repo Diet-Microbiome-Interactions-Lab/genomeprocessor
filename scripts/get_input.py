@@ -52,7 +52,7 @@ I deployed the following Strategy
 
 5) Print a SPAdes command template and a compact options cheat-sheet.
 
-6) I wrote a CSV report (catalog + R1/R2 pairing sanity) for record-keeping.
+6) I directed the script to write a CSV report (catalog + R1/R2 pairing sanity) for record-keeping.
 
 I have explained in line, why I chose each construct and which import or built-in I used.
 '''
