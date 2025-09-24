@@ -54,7 +54,7 @@ I deployed the following Strategy
 
 6) I directed the script to write a CSV report (catalog + R1/R2 pairing sanity) for record-keeping.
 
-I have explained in line, why I chose each construct and which import or built-in I used.
+I have explained in line, why I chose each construct and which import or built-in packages I used.
 '''
 
 import sys
@@ -86,7 +86,7 @@ import csv
     # Example: writer.writerow([...]) to save one row in a CSV.
 
 import binascii
-    # convert binary data ↔ hex string.
+    # convert binary data to hex string.
     # Preview "magic bytes" of binary files (e.g., BAM, CRAM, HDF5).
     # Useful for format detection when file is not plain text.
 
